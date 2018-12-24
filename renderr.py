@@ -38,7 +38,7 @@ class Render:
         weather_font = ImageFont.truetype(font=font_l, size=50)
         wind_font = ImageFont.truetype(font=font_l, size=28)
 
-        im.paste(ic, (74, 58), ic)
+        im.paste(ic, (74, int(im.size[1]/2-ic.size[1]/2)), ic)
         draw = ImageDraw.Draw(txt)
         tsize = ImageDraw.Draw(txt).textsize
         draw.text((im.width - tsize(city, city_font)[0] - 77, 42), city,
